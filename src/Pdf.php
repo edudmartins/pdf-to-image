@@ -1,12 +1,12 @@
 <?php
 
-namespace Spatie\PdfToImage;
+namespace DMSolucoes\PdfToImage;
 
 use Imagick;
-use Spatie\PdfToImage\Exceptions\InvalidFormat;
-use Spatie\PdfToImage\Exceptions\PdfDoesNotExist;
-use Spatie\PdfToImage\Exceptions\PageDoesNotExist;
-use Spatie\PdfToImage\Exceptions\InvalidLayerMethod;
+use DMSolucoes\PdfToImage\Exceptions\InvalidFormat;
+use DMSolucoes\PdfToImage\Exceptions\PdfDoesNotExist;
+use DMSolucoes\PdfToImage\Exceptions\PageDoesNotExist;
+use DMSolucoes\PdfToImage\Exceptions\InvalidLayerMethod;
 
 class Pdf
 {
@@ -179,6 +179,26 @@ class Pdf
 
         return file_put_contents($pathToImage, $imageData) !== false;
     }
+    
+    /**
+     * Save the image to the given path.
+     *
+     * @param string $pathToImage
+     *
+     * @return bool
+     */
+    public function getImageData($pathToImage)
+    {
+        if (is_dir($pathToImage)) {
+            $pathToImage = rtrim($pathToImage, '\/').DIRECTORY_SEPARATOR.$this->page.'.'.$this->outputFormat;
+        }
+
+        $imageData = $this->getImageData($pathToImage);
+
+        return $imageData;
+    }
+    
+    
 
     /**
      * Save the file as images to the given directory.
