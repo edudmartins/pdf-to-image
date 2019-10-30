@@ -1,20 +1,20 @@
 {
-    "name": "spatie/pdf-to-image",
+    "name": "edudmartins/pdf-to-image",
     "description": "Convert a pdf to an image",
     "keywords": [
-        "spatie",
+        "edudmartins",
         "pdf-to-image",
         "pdf",
         "convert",
         "image"
     ],
-    "homepage": "https://github.com/spatie/pdf-to-image",
+    "homepage": "https://github.com/edudmartins/pdf-to-image",
     "license": "MIT",
     "authors": [
         {
-            "name": "Freek Van der Herten",
-            "email": "freek@spatie.be",
-            "homepage": "https://spatie.be",
+            "name": "Eduardo Dias Martins",
+            "email": "edudmartins@hotmail.com",
+            "homepage": "https://dmweb.com.br",
             "role": "Developer"
         }
     ],
@@ -27,12 +27,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\PdfToImage\\": "src"
+            "DMSolucoes\\PdfToImage\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\PdfToImage\\Test\\": "tests"
+            "DMSolucoes\\PdfToImage\\Test\\": "tests"
         }
     },
     "scripts": {
