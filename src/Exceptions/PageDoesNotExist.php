@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\PdfToImage\Exceptions;
+namespace DMSolucoes\PdfToImage\Exceptions;
 
 use Exception;
 
